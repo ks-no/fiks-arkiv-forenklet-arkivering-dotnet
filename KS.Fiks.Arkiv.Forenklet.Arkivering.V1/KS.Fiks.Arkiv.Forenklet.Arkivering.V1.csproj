@@ -6,9 +6,6 @@
         <Authors>Ks-Kommunesektorens Organisasjon</Authors>
         <Company>Ks-Kommunesektorens Organisasjon</Company>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <LangVersion>10</LangVersion>
         <Copyright>Ks-Kommunesektorens Organisasjon</Copyright>
         <PackageProjectUrl>https://github.com/ks-no/fiks-arkiv-forenklet-arkivering-dotnet</PackageProjectUrl>
         <SignAssembly>true</SignAssembly>
