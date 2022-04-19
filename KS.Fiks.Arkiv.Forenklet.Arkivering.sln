@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KS.Fiks.Arkiv.Forenklet.Arkivering.V1", "KS.Fiks.Arkiv.Forenklet.Arkivering.V1\KS.Fiks.Arkiv.Forenklet.Arkivering.V1.csproj", "{D68B3937-B3F3-465B-9461-02E85634D752}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Tests", "KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Tests\KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Tests.csproj", "{4AAAFF66-B79F-41D8-950B-0F9EAA27C508}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{D68B3937-B3F3-465B-9461-02E85634D752}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D68B3937-B3F3-465B-9461-02E85634D752}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D68B3937-B3F3-465B-9461-02E85634D752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AAAFF66-B79F-41D8-950B-0F9EAA27C508}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AAAFF66-B79F-41D8-950B-0F9EAA27C508}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AAAFF66-B79F-41D8-950B-0F9EAA27C508}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AAAFF66-B79F-41D8-950B-0F9EAA27C508}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
