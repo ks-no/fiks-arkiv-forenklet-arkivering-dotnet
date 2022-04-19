@@ -1,6 +1,5 @@
 ﻿using System;
 using KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Helpers;
-using KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Tests.Validering;
 using KS.Fiks.Arkiv.Models.V1.Innsyn.Sok;
 using NUnit.Framework;
 

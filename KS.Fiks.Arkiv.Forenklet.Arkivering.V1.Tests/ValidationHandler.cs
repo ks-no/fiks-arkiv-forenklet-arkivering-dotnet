@@ -1,7 +1,7 @@
 using System;
 using System.Xml.Schema;
 
-namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Tests.Validering
+namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Tests
 {
     public class ValidationHandler
     {
