@@ -31,8 +31,14 @@
             <Pack>true</Pack>
             <PackagePath>/</PackagePath>
         </None>
-        <None Include="LICENSE" Pack="true" PackagePath="" />
-        <None Include="README.md" Pack="true" PackagePath="" />
+        <None Include="../LICENSE">
+            <Pack>true</Pack>
+            <PackagePath>/</PackagePath>
+        </None>
+        <None Include="../README.md">
+            <Pack>true</Pack>
+            <PackagePath>/</PackagePath>
+        </None>
     </ItemGroup>
 
 </Project>
