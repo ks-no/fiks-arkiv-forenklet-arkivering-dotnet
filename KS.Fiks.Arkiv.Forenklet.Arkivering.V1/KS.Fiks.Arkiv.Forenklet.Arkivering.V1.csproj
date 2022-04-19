@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFrameworks>netcoreapp3.1;netstandard2.0</TargetFrameworks>
         <Title>KS FIKS Arkiv Forenklet Arkivering</Title>
         <Authors>Ks-Kommunesektorens Organisasjon</Authors>
         <Company>Ks-Kommunesektorens Organisasjon</Company>
