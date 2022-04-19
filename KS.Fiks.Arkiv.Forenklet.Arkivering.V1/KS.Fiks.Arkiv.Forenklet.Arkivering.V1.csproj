@@ -1,14 +1,40 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Title>KS FIKS Arkiv Forenklet Arkivering</Title>
+        <Authors>Ks-Kommunesektorens Organisasjon</Authors>
+        <Company>Ks-Kommunesektorens Organisasjon</Company>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>10</LangVersion>
+        <Copyright>Ks-Kommunesektorens Organisasjon</Copyright>
+        <PackageProjectUrl>https://github.com/ks-no/fiks-arkiv-forenklet-arkivering-dotnet</PackageProjectUrl>
+        <SignAssembly>true</SignAssembly>
+        <AssemblyOriginatorKeyFile>..\fiks-io-strongly-named-key.snk</AssemblyOriginatorKeyFile>
+        <PackageIcon>KS.png</PackageIcon>
+        <RepositoryUrl>https://github.com/ks-no/fiks-forenklet-arkivering-dotnet.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>FIKS</PackageTags>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <VersionPrefix>1.0.0</VersionPrefix>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <Description>Forenklet arkivering for Fiks-Arkiv V1</Description>
     </PropertyGroup>
 
     <ItemGroup>
       <PackageReference Include="KS.Fiks.Arkiv.Models.V1" Version="0.0.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="KS.png">
+            <Pack>true</Pack>
+            <PackagePath>/</PackagePath>
+        </None>
+        <None Include="LICENSE" Pack="true" PackagePath="" />
+        <None Include="README.md" Pack="true" PackagePath="" />
     </ItemGroup>
 
 </Project>
