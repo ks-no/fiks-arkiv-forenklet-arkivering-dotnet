@@ -17,7 +17,7 @@
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <VersionPrefix>1.0.0</VersionPrefix>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
+<!--        <PackageReadmeFile>README.md</PackageReadmeFile>-->
         <Description>Forenklet arkivering for Fiks-Arkiv V1</Description>
         <AssemblyName>KS.Fiks.Arkiv.Forenklet.Arkivering.V1</AssemblyName>
         <RootNamespace>KS.Fiks.Arkiv.Forenklet.Arkivering.V1</RootNamespace>
