@@ -26,7 +26,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="KS.Fiks.Arkiv.Models.V1" Version="0.0.5" />
+      <PackageReference Include="KS.Fiks.Arkiv.Models.V1" Version="0.0.9" />
     </ItemGroup>
 
     <ItemGroup>

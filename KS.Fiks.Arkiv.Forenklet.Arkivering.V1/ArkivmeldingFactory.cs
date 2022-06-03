@@ -1,10 +1,16 @@
 ﻿using System;
 using System.Linq;
 using KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding;
+using KS.Fiks.Arkiv.Models.V1.Arkivstruktur;
 using KS.Fiks.Arkiv.Models.V1.Kodelister;
 using KS.Fiks.Arkiv.Models.V1.Metadatakatalog;
 using KS.Fiks.IO.Arkiv.Client.ForenkletArkivering;
+using Dokumentbeskrivelse = KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding.Dokumentbeskrivelse;
+using Dokumentobjekt = KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding.Dokumentobjekt;
+using Journalpost = KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding.Journalpost;
 using Kode = KS.Fiks.Arkiv.Models.V1.Kodelister.Kode;
+using Korrespondansepart = KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding.Korrespondansepart;
+using Saksmappe = KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding.Saksmappe;
 
 namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1
 {
@@ -117,18 +123,10 @@ namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1
                     journalpost.Skjerming = new Skjerming
                     {
                         Skjermingshjemmel = Skjermingshjemmel,
-                        SkjermingMetadata =
+                        Tilgangsrestriksjon = new Tilgangsrestriksjon()
                         {
-                            new SkjermingMetadata
-                            {
-                                KodeProperty = "tittel",
-                                Beskrivelse = ""
-                            },
-                            new SkjermingMetadata
-                            {
-                                KodeProperty = "korrespondansepart",
-                                Beskrivelse = ""
-                            }
+                            Beskrivelse = "", //TODO Hva skal være default?
+                            KodeProperty = "" //TODO Hva skal være default?
                         }
                     };
                 }
@@ -165,10 +163,10 @@ namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1
                         dokumentbeskrivelse.Skjerming = new Skjerming()
                         {
                             Skjermingshjemmel = Skjermingshjemmel,
-                            SkjermingDokument = new SkjermingDokument
+                            Tilgangsrestriksjon = new Tilgangsrestriksjon()
                             {
-                                KodeProperty = SkjermingDokumentHele,
-                                Beskrivelse = ""
+                                Beskrivelse = "", //TODO Hva skal være default?
+                                KodeProperty = "" //TODO Hva skal være default?
                             }
                         };
                     }
@@ -417,18 +415,10 @@ namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1
                     journalpost.Skjerming = new Skjerming()
                     {
                         Skjermingshjemmel = input.nyInnkommendeJournalpost.skjermingForenklet?.skjermingshjemmel,
-                        SkjermingMetadata =
+                        Tilgangsrestriksjon = new Tilgangsrestriksjon()
                         {
-                            new SkjermingMetadata()
-                            {
-                                KodeProperty = "tittel",
-                                Beskrivelse = "",
-                            },
-                            new SkjermingMetadata()
-                            {
-                                KodeProperty = "korrespondansepart",
-                                Beskrivelse = ""
-                            }
+                            Beskrivelse = "", //TODO Hva skal være default?
+                            KodeProperty = "", //TODO Hva skal være default?
                         }
                     };
                 }
@@ -466,10 +456,10 @@ namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1
                         dokbesk.Skjerming = new Skjerming()
                         {
                             Skjermingshjemmel = input.nyInnkommendeJournalpost.skjermingForenklet?.skjermingshjemmel,
-                            SkjermingDokument = new SkjermingDokument()
+                            Tilgangsrestriksjon = new Tilgangsrestriksjon()
                             {
-                                KodeProperty = "Hele",
-                                Beskrivelse = "" //TODO
+                                Beskrivelse = "", //TODO Hva skal være default?
+                                KodeProperty = "" //TODO Hva skal være default?
                             }
                         };
                     }
@@ -667,10 +657,11 @@ namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1
                     {
                         dokumentbeskrivelse.Skjerming = new Skjerming()
                         {
-                            SkjermingDokument = new SkjermingDokument()
+                            Skjermingshjemmel = "", //TODO Hva skal inn her?
+                            Tilgangsrestriksjon = new Tilgangsrestriksjon()
                             {
-                                KodeProperty = SkjermingDokumentHele,
-                                Beskrivelse = "" //TODO
+                                Beskrivelse = "", //TODO Hva skal være default?
+                                KodeProperty = "" //TODO Hva skal være default?
                             }
                         };
                     }

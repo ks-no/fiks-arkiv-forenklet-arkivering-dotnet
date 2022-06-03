@@ -1,5 +1,6 @@
 ﻿using System;
 using KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Helpers;
+using KS.Fiks.Arkiv.Models.V1.Arkivstruktur;
 using KS.Fiks.Arkiv.Models.V1.Innsyn.Sok;
 using NUnit.Framework;
 
@@ -21,7 +22,8 @@ namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Tests.Brukerhistorier
                 System = "Fagsystem X",
                 Tidspunkt = DateTime.Now,
                 Skip = 0,
-                Take = 100
+                Take = 100,
+                ResponsType = ResponsType.Utvidet
             };
 
             arkivmeldingsok.Parameter.Add(

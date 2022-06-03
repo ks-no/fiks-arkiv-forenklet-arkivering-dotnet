@@ -1,9 +1,17 @@
 ﻿using System;
 using KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Helpers;
-using KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding;
+using KS.Fiks.Arkiv.Models.V1.Arkivstruktur;
 using KS.Fiks.Arkiv.Models.V1.Innsyn.Sok;
+using KS.Fiks.Arkiv.Models.V1.Kodelister;
 using KS.Fiks.Arkiv.Models.V1.Metadatakatalog;
 using NUnit.Framework;
+using Dokumentbeskrivelse = KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding.Dokumentbeskrivelse;
+using Dokumentobjekt = KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding.Dokumentobjekt;
+using Journalpost = KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding.Journalpost;
+using Kode = KS.Fiks.Arkiv.Models.V1.Metadatakatalog.Kode;
+using Korrespondansepart = KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding.Korrespondansepart;
+using Part = KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding.Part;
+using Saksmappe = KS.Fiks.Arkiv.Models.V1.Arkivering.Arkivmelding.Saksmappe;
 
 namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Tests.Brukerhistorier
 {
@@ -77,8 +85,8 @@ namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Tests.Brukerhistorier
                         Beskrivelse = "" //TOOD
                     }, 
                     Journalenhet = "BYG",
-                    // arkivdel = "BYGG", // Mangler og bør være kodeobjekt
-                    ReferanseArkivdel = { "BYGG" },  // Dette er ikke tilhører arkivdel, men arkivdeler som er relatert!
+        
+                    Arkivdel = new Kode() { Beskrivelse = "BYGG", KodeProperty = "BYGG"},  //TODO Er det en kodeliste her? Gammel kommentar -> Dette er ikke tilhører arkivdel, men arkivdeler som er relatert!
                     // mappetype = new Kode
                     // { kodeverdi = "Saksmappe"}, // Standardiseres? Gitt av spesialiseringen?
                     Klassifikasjon = { gnr },
@@ -110,14 +118,9 @@ namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Tests.Brukerhistorier
                         Tilgangsrestriksjon = new Tilgangsrestriksjon()
                         {
                             KodeProperty = "13",
-                            Beskrivelse = "" //TOOD
+                            Beskrivelse = "" //TODO Hva skal her?
                         }, // Settes av server?
                         Skjermingshjemmel = "Ofl § 13, fvl § 123",
-                        SkjermingMetadata = { new SkjermingMetadata()
-                        {
-                            KodeProperty = "tittel",
-                            Beskrivelse = ""
-                        }} //TODO Her må det være kodeverk
                     },
                     // prosjekt
                     // tilgangsgruppe
@@ -128,8 +131,6 @@ namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Tests.Brukerhistorier
                     }
                 };
                 // payload = Arkivintegrasjon.Serialize(saksmappe);
-
-                systemid = "12345"; // Nøkkel fra arkivering av saksmappen / søk
             }
 
             // Overfør nye journalposter
@@ -214,8 +215,7 @@ namespace KS.Fiks.Arkiv.Forenklet.Arkivering.V1.Tests.Brukerhistorier
                         KodeProperty = "13",
                         Beskrivelse = ""
                     },
-                    Skjermingshjemmel = "Off.loven § 13",
-                    Skjermingsvarighet = "60" // Antall år bør ikke være string
+                    Skjermingshjemmel = "Off.loven § 13"
                 },
                 // Dokumenter
                 Dokumentbeskrivelse =
